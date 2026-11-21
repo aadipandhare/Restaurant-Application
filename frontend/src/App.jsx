@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar'
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Menu } from './pages/Menu'
+import { Gallery } from './pages/Gallery';
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
           <Route path="/" element={<Home/>}/>
           <Route path="/menu" element={<Menu/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/contact" element={<Contact/>}/>
           
         </Routes>      

@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className='absolute top-0 left-0 z-100 w-full bg-transparent'>
 
       <ul className="flex gap-5 justify-center mt-5 text-sm text-white">
-        <NavLink to="/home"  style={({ isActive }) => ({
+        <NavLink to="/"  style={({ isActive }) => ({
             textDecoration: isActive ? "underline" : "none",
             textUnderlineOffset: "4px",
           })}>
@@ -26,6 +26,13 @@ export const Navbar = () => {
             textUnderlineOffset: "4px",
         })}>
           <p>About</p>
+        </NavLink>
+       
+        <NavLink to="/gallery" style={({isActive})=> ({
+            textDecoration: isActive ? "underline" : "none",
+            textUnderlineOffset: "4px",
+        })}>
+          <p>Gallery</p>
         </NavLink>
 
         <NavLink to="/contact" style={({isActive})=> ({
