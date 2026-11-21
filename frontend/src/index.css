@@ -1,0 +1,6 @@
+@import "tailwindcss";   
+
+
+.menu-category{
+    @apply w-full h-10 border  rounded-2xl mx-5 hover:bg-[#30051F] hover:text-white
+}
