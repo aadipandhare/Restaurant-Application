@@ -1,0 +1,300 @@
+.menu-book-page{
+  position: relative;
+  padding: 58px 18px 42px;
+  text-align: center;
+  background: #2c101f;
+  color: #fff8e9;
+  min-height: 900px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.menu-book-backdrop{
+  position: absolute;
+  insert: 0;
+  z-index: -1;
+  opacity:.18;
+  
+
+  background: 
+  radial-gradient(
+      ellipse at 12% 15%,
+      #a64b27 0,
+      transparent 28%
+      ),
+
+  radial-gradient(
+    ellipse at 88% 80%,
+      #a64b27 0,
+      transparent 26%
+  ),
+  
+  repeating-linear-gradient(
+      135deg,
+      transparent 0 22px,
+      #d49a3d10 23px 24px
+  )
+}
+
+
+/* MENU HEADING */
+
+.menu-book-intro{
+    margin: 0 auto 28px;
+    
+}
+
+
+.menu-book-eyebrow{
+  color: #e4b653;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* clamp() makes your text responsive while keeping it within a minimum and maximum size. */
+.menu-book-intro h1{
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 54px);
+  font-weight: 500;
+  margin-top: 8px;
+  color: #fff4dc;;
+}
+.menu-book-intro h1 em {
+  color: #e8b94e;
+}
+.menu-book-intro p{
+  margin-top: 8px;
+  font-size: 12px;
+   color: #ddc7b0;
+}
+
+
+
+/* BOOK CONTAINER */
+.menu-book-stage{
+  width: min(100%,940%);
+  margin: 0 auto;
+
+  position: relative;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 22px;
+
+
+  perspective: 1800px;
+}
+
+.book-shadow{
+  position: absolute;
+  bottom: 8px;
+}
+
+.flipBook{
+  margin: 0 auto;
+  z-index:1;
+}
+
+
+
+
+
+
+ /* PAPER DESIGN */
+
+.menu-paper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 27px 30px 22px;
+  background-color: #f4ead6;
+
+  background-image:
+    radial-gradient(
+      #9c784b12 .7px,
+      transparent .8px
+    ),
+    linear-gradient(
+      105deg,
+      #fff8e9 0%,
+      #f2e5cd 100%
+    );
+
+  background-size:
+    5px 5px,
+    100% 100%;
+
+  color: #32231b;
+
+  border: 1px solid #d2b98f;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.menu-paper::before{
+  content:"";
+  position:absolute;
+  insert: 9px;
+
+  border: 1px solid #c8a76e66;
+  pointer-events: none;
+  /* display: flex;
+  padding: 20px 12px 12px;
+  margin: 10px 5px 10px; */
+
+}
+
+
+
+
+
+ /* PAPER HEADER */
+
+.paper-topline{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  color: #9a672c;
+  border-bottom: 1px solid #bfa77e;
+}
+
+.page-kicker{
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #a26d2c;
+  font-weight: 700;
+}
+
+.paper-heading{
+  text-align: center;
+  padding: 17px 0 12px;
+}
+
+.paper-heading h2{
+  font-size: clamp(27px, 3vw, 38px);
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+
+  text-transform: uppercase;
+}
+
+.paper-rule{
+  height: 1px;
+  background:  #c5a36c;
+  margin: 15px auto 0;
+  width: 80%;
+  position: relative;
+  color: #b47b31;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+
+
+/* BOOK NAVIGATION */
+.book-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin:18px auto 0;
+
+  position: relative;
+  z-index: 2;
+  button:hover{
+  background-color: #c08b37;
+ }
+}
+
+.book-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid #c08b37;
+  padding: 10px 17px;
+  background: transparent;
+  color: #f5dfb6;
+  border-radius: 24px;
+  font-size: 12px;
+  transform: .2s;
+  cursor: pointer;
+ 
+}
+
+.book-page-status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+   background: transparent;
+  color: #f5dfb6;
+}
+
+.spread-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 3px;
+}
+
+.spread-dots button{
+  width: 7px;
+  height: 7px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: #8c6a50;
+  cursor: pointer;
+}
+
+.spread-dots button.selected{
+  background: #e6ae39;
+  transform: scale(1.25)
+}
+
+.book-control primary{
+  background: #e6ae39;
+  color: #f5dfb6;
+}
+
+
+
+
+
+/* PAGE INDICATORS */
+.spread-dots{
+  display: flex;
+  gap: 5px;
+  margin-left: 3px;
+}
+
+.spread-dots button{
+  width: 7px;
+  height: 7px;
+
+  border: 0;
+  border-radius: 50%;
+
+  padding: 0;
+
+  background: #8c6a50;
+
+  cursor: pointer;
+}
+
+.spread-dots button.selected {
+  background: #e6ae39;
+  transform: scale(1.25);
+}
+
